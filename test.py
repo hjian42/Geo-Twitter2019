@@ -1,7 +1,7 @@
 from crawl import *
 import json
 
-with open('USA.json') as f:
+with open('UK.json') as f:
 	print('------------------')
 	for line in f:
 		data = json.loads(line)
