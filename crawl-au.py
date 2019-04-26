@@ -41,10 +41,11 @@ class MyListener(StreamListener):
                         for data in data_list:
                             f.write(data)
                 data_list = []
-            data_json = json.loads(data)
-            # if not has_url(data_json['text']) and is_normal_user(data_json['user']):
-            data_list.append(data)
-            NUM_OF_TWEETS['count'] += 1
+            else:
+                data_json = json.loads(data)
+                if not has_url(data_json['text']):
+                    data_list.append(data)
+                    NUM_OF_TWEETS['count'] += 1
             NUM_OF_TWEETS['seen'] += 1
             if NUM_OF_TWEETS['seen'] % 20 == 0:
                 print('seen:\t', NUM_OF_TWEETS['seen'], 'count:\t', NUM_OF_TWEETS['count'])
