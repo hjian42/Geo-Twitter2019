@@ -36,16 +36,15 @@ class MyListener(StreamListener):
         try:
             if len(data_list) == 20:
                 if data_list:
-                    with open('AUS.json', 'a') as f:
+                    with open('AUS-no-filter.json', 'a') as f:
                         print('Write ', NUM_OF_TWEETS['count'], 'tweets')
                         for data in data_list:
                             f.write(data)
                 data_list = []
-            else:
-                data_json = json.loads(data)
-                if not has_url(data_json['text']) and is_normal_user(data_json['user']):
-                    data_list.append(data)
-                    NUM_OF_TWEETS['count'] += 1
+            data_json = json.loads(data)
+            # if not has_url(data_json['text']) and is_normal_user(data_json['user']):
+            data_list.append(data)
+            NUM_OF_TWEETS['count'] += 1
             NUM_OF_TWEETS['seen'] += 1
             if NUM_OF_TWEETS['seen'] % 20 == 0:
                 print('seen:\t', NUM_OF_TWEETS['seen'], 'count:\t', NUM_OF_TWEETS['count'])
