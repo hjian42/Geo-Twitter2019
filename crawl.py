@@ -37,7 +37,7 @@ class MyListener(StreamListener):
         try:
             if len(data_list) == 20:
                 if data_list:
-                    with open('UK-no-filter-v2.json', 'a') as f:
+                    with open('UK-no-filter.json', 'a') as f:
                         print('Write ', NUM_OF_TWEETS['count'], 'tweets')
                         for data in data_list:
                             f.write(data)

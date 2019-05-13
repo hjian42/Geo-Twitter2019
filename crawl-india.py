@@ -8,6 +8,7 @@ import re
 LOCATION_UK = [-11.22,49.96,1.69,59.37]
 LOCATION_USA = [-130.16,25.58,-62.93,49.34] # no alaska
 LOCATION_AUS = [112.467, -55.05, 168, -9.133]
+LOCATION_INDIA = [67.93,7.82,89.2,35.66]
 
 @classmethod
 def parse(cls, api, raw):
@@ -36,7 +37,7 @@ class MyListener(StreamListener):
         try:
             if len(data_list) == 20:
                 if data_list:
-                    with open('USA-no-filter.json', 'a') as f:
+                    with open('INDIA-no-filter.json', 'a') as f:
                         print('Write ', NUM_OF_TWEETS['count'], 'tweets')
                         for data in data_list:
                             f.write(data)
@@ -78,7 +79,7 @@ if __name__ == '__main__':
     tweepy.models.Status.first_parse = tweepy.models.Status.parse
     tweepy.models.Status.parse = parse
     twitter_stream = Stream(auth, MyListener())
-    twitter_stream.filter(locations=LOCATION_USA, languages=["en"])
+    twitter_stream.filter(locations=LOCATION_INDIA, languages=["en"])
 
 
 
