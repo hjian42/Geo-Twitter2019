@@ -19,18 +19,6 @@ In this project, we refer to a few papers. Feel free to add more when you find n
 | token 	| 41,349,313 	| 13,608,609 	| 1,070,657 	| 56,028,579 	| 4,703,173 	|
 | term 	| 1,932,868 	| 838,769 	| 144,306 	| 2,593,173 	| 164,809 	|
 
-## connect to EC2
-
-```
-chmod 400 crawling.pem
-ssh -i "crawling.pem" ec2-user@ec2-52-53-201-26.us-west-1.compute.amazonaws.com
-
-chmod 400 crawl-au.pem
-ssh -i "crawl-au.pem" ec2-user@ec2-54-219-137-231.us-west-1.compute.amazonaws.com
-
-chmod 400 crawl-usa.pem
-ssh -i "crawl-usa.pem" ec2-user@ec2-13-57-195-34.us-west-1.compute.amazonaws.com
-```
 
 ## set up EC2
 
