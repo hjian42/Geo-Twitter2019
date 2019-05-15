@@ -1,3 +1,14 @@
+## set up EC2 (if first time user)
+
+```
+sudo yum install git 
+sudo yum install python-pip
+git clone https://github.com/emoryjianghang/dialectMap
+sudo pip install tweepy
+
+python crawl.py
+```
+
 ## set up adaGram
 
 ```
