@@ -24,7 +24,41 @@ In this project, we refer to a few papers. Feel free to add more when you find n
 
 This `224u-dataset` folder on [google drive](https://drive.google.com/drive/folders/1FHk2x0nk_hCNf8fcGL0XNNep-mvo_BXX?usp=sharing).
 
-- `countryName.txt` is raw data version. We have not preprocess the emojis, @xxx, etc
-- for now, want to compare USA and UK first while collecting the rest of the data. 
+- `countryName.txt`: not preprocess the emojis, @xxx, etc
+- `countryName_tokenized.txt`: filtered out @xxx and a few text normalization
+- `countryName_tok_pos.txt`: word_pos format for the text section
+
+### preprocessing
+
+1. merge_files.py: merge_jsons()
+	- e.g. UK.json + UK-no-filter.json + UK-no-filter2.json
+	- OUTPUT: everything will be added to UK-no-filter.json
+2. json2txt: fixed new lines inside text strings
+	- OUTPUT: UK.txt
+3. preprocess_tokenize.py
+	- OUTPUT: UK_tokenized.txt, UK_tok_pog.txt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
