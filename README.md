@@ -13,11 +13,11 @@ In this project, we refer to a few papers. Feel free to add more when you find n
 
 ### total statistics vs. CMU: 378K tweets (Raw Data)
 
-| Number 	| USA 	| UK 	| Australia 	| Total 	| CMU-data 	|
-|:------:	|:----------:	|:----------:	|:---------:	|:----------:	|:---------:	|
-| tweet 	| 2,211,452 	| 1,088,232 	| 58,108 	| 6,327,252 	| 377,616 	|
-| token 	| 41,349,313 	| 22,267,331 	| 1,070,657 	| 63,616,644 	| 4,703,173 	|
-| term 	| 1,932,868 	| 1,156,624 	| 144,306 	| 2,789,423 	| 164,809 	|
+| Number 	| USA 	| UK 	| Total 	|
+|:------:	|:----------:	|:---------:	|:----------:	|
+| tweet 	| 2,211,452 	| 1,088,232 	| 3,163,626 	| 
+| token 	| 41,349,313 	| 22,267,331 	| 63,616,644 	| 
+| term 	| 1,932,868 	| 1,156,624 	| 2,789,423 	| 
 
 
 ### dataset
@@ -32,12 +32,12 @@ This `224u-dataset` folder on [google drive](https://drive.google.com/drive/fold
 
 1. merge_files.py: merge_jsons()
 	- e.g. UK.json + UK-no-filter.json + UK-no-filter2.json
-	- OUTPUT: everything will be added to UK-no-filter.json
-2. json2txt: fixed new lines inside text strings
-	- OUTPUT: UK.txt
+	- output: everything will be added to UK-no-filter.json
+2. json2txt: remove new lines existing inside text strings
+	- output: UK.txt
 3. preprocess_tokenize.py
-	- OUTPUT: UK_tokenized.txt, UK_tok_pog.txt
-
+	- output: UK_tokenized.txt, UK_tok_pos.txt
+4. merge_files.py: count_stats()
 
 
 
