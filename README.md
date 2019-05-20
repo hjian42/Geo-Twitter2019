@@ -15,12 +15,12 @@ In this project, we refer to a few papers. Feel free to add more when you find n
 
 | Number 	| USA 	| UK 	| Australia 	| Total 	| CMU-data 	|
 |:------:	|:----------:	|:----------:	|:---------:	|:----------:	|:---------:	|
-| tweet 	| 2,211,452 	| 558,058 	| 58,108 	| 5,655,236 	| 377,616 	|
-| token 	| 41,349,313 	| 13,608,609 	| 1,070,657 	| 56,028,579 	| 4,703,173 	|
-| term 	| 1,932,868 	| 838,769 	| 144,306 	| 2,593,173 	| 164,809 	|
+| tweet 	| 2,211,452 	| 1,088,232 	| 58,108 	| 6,327,252 	| 377,616 	|
+| token 	| 41,349,313 	| 22,267,331 	| 1,070,657 	| 63,616,644 	| 4,703,173 	|
+| term 	| 1,932,868 	| 1,156,624 	| 144,306 	| 2,789,423 	| 164,809 	|
 
 
-### dataset 
+### dataset
 
 This `224u-dataset` folder on [google drive](https://drive.google.com/drive/folders/1FHk2x0nk_hCNf8fcGL0XNNep-mvo_BXX?usp=sharing).
 
@@ -37,15 +37,6 @@ This `224u-dataset` folder on [google drive](https://drive.google.com/drive/fold
 	- OUTPUT: UK.txt
 3. preprocess_tokenize.py
 	- OUTPUT: UK_tokenized.txt, UK_tok_pog.txt
-
-
-
-
-
-
-
-
-
 
 
 
