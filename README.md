@@ -11,7 +11,7 @@ In this project, we refer to a few papers. Feel free to add more when you find n
 
 ## Dataset Statistics
 
-### total statistics vs. CMU: 378K tweets (Raw Data)
+### total statistics
 
 | Number 	| USA 	| UK 	| Total 	|
 |:------:	|:----------:	|:---------:	|:----------:	|
@@ -19,6 +19,7 @@ In this project, we refer to a few papers. Feel free to add more when you find n
 | token 	| 41,349,313 	| 22,267,331 	| 63,616,644 	| 
 | term 	| 1,932,868 	| 1,156,624 	| 2,789,423 	| 
 
+note: CMU geo data has 378K tweets
 
 ### dataset
 
