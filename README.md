@@ -2,7 +2,7 @@
 
 ## Description
 
-In this project, we refer to a few papers. Feel free to add more when you find new, useful papers:
+In this project, we refer to a few papers. 
 
 1. [A Latent Variable Model for Geographic Lexical Variation](http://www.cs.cmu.edu/~nasmith/papers/eisenstein+oconnor+smith+xing.emnlp10.pdf): the first paper that detects dialect variations using LDA
 2. [Breaking Sticks and Ambiguities with Adaptive Skip-gram](https://arxiv.org/pdf/1502.07257.pdf): AdaGram Model that does word sense disambiguation, with its Julia Implementation: [github](https://github.com/sbos/AdaGram.jl). There is a python implementation, do not use it since its training won't work. To train models, Julia model is the only way.
@@ -14,10 +14,10 @@ In this project, we refer to a few papers. Feel free to add more when you find n
 ### total statistics
 
 | Number 	| USA 	| UK 	| Total 	|
-|:------:	|:----------:	|:---------:	|:----------:	|
-| tweet 	| 2,211,452 	| 1,088,232 	| 3,163,626 	| 
-| token 	| 41,349,313 	| 22,267,331 	| 63,616,644 	| 
-| term 	| 1,932,868 	| 1,156,624 	| 2,789,423 	| 
+|--------	|------------	|------------	|------------	|
+| tweet 	| 2,075,394 	| 1,088,232 	| 3,163,626 	|
+| token 	| 41,637,107 	| 22,012,953 	| 63,650,060 	|
+| term 	| 865,784 	| 469,570 	| 1,167,790 	|
 
 note: CMU geo data has 378K tweets
 
@@ -25,20 +25,10 @@ note: CMU geo data has 378K tweets
 
 This `224u-dataset` folder on [google drive](https://drive.google.com/drive/folders/1FHk2x0nk_hCNf8fcGL0XNNep-mvo_BXX?usp=sharing).
 
-- `countryName.txt`: not preprocess the emojis, @xxx, etc
-- `countryName_tokenized.txt`: filtered out @xxx and a few text normalization
+- `countryName.txt`: raw text data, not preprocess the emojis, @xxx, etc
+- `countryName_tokenized.txt`: lower case, filtered out @xxx, emojis, and other text normalizations
 - `countryName_tok_pos.txt`: word_pos format for the text section
-
-### preprocessing
-
-1. merge_files.py: merge_jsons()
-	- e.g. UK.json + UK-no-filter.json + UK-no-filter2.json
-	- output: everything will be added to UK-no-filter.json
-2. json2txt: remove new lines existing inside text strings
-	- output: UK.txt
-3. preprocess_tokenize.py
-	- output: UK_tokenized.txt, UK_tok_pos.txt
-4. merge_files.py: count_stats()
+- `usa_uk.txt`: usa + uk tweets from the tokenized version txt, for adagram
 
 
 

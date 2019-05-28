@@ -3,10 +3,21 @@ from collections import defaultdict
 import os,sys
 import twokenize
 import nltk
-
+import re
 
 country = 'USA'
 word_count = defaultdict(int)
+
+def clean_tweets(text):
+    text = re.sub(r'&[a-z]{3};', ' <sym> ', text)  # '&amp;'
+    text = re.sub(r'&gt;', '>', text)
+    text = re.sub(r'&lt;', '<', text) 
+    text = re.sub(r'@\w+', ' <user> ', text)
+    ENCODE_EMOJI = re.compile(u'([\U00010000-\U0010ffff])|([\U00002600-\U000027BF])|([\U0001f300-\U0001f64F])|([\U0001f680-\U0001f6FF])', flags=re.UNICODE)  # emoji
+    text = ENCODE_EMOJI.sub(r'', text)
+    text = re.sub(' +', ' ', text)
+    
+    return text.strip().lower()
 
 def get_tokens(text):
   toks = twokenize.tokenize(text.lower())
@@ -23,34 +34,29 @@ datafile = "../tweets2019/{}.txt".format(country)
 outputfile = "../tweets2019/{}_tokenized.txt".format(country)
 pos_outputfile = "../tweets2019/{}_tok_pos.txt".format(country)
 
-# with open(datafile, encoding = "utf-8") as f, open(outputfile, 'w') as out, open(pos_outputfile, 'w') as out1:
-#   for line in f:
-#     parts = line.split("\t")
-#     if len(parts) != 6:
-#       # print('Invalid tweets')
-#       continue
-#     username, dt, _xy, x, y, text = parts
-#     tok_text = " ".join(get_tokens(text))
-#     out.write('\t'.join([username, dt, _xy, x, y, tok_text]))
-#     out.write('\n')
+with open(datafile, encoding = "utf-8") as f, open(outputfile, 'w') as out, open(pos_outputfile, 'w') as out1:
+  for line in f:
+    parts = line.split("\t")
+    if len(parts) != 6:
+      print('Invalid tweets')
+      continue
+    username, dt, _xy, x, y, text = parts
+    tok_text = " ".join(get_tokens(text))
+    clean_text = clean_tweets(tok_text)
+    out.write('\t'.join([username, dt, _xy, x, y, clean_text]))
+    out.write('\n')
 
 
 with open(outputfile, encoding = "utf-8") as f, open(pos_outputfile, 'w') as out1:
   for line in f:
     parts = line.split("\t")
     if len(parts) != 6:
-      # print('Invalid tweets')
+      print('Invalid tweets')
       continue
     username, dt, _xy, x, y, text = parts
     tok_pos_text = " ".join(get_pos_tokens(text))
     out1.write('\t'.join([username, dt, _xy, x, y, tok_pos_text]))
     out1.write('\n')
-
-
-# with open("../tweets2019/{}.dict".format(country), 'w') as out:
-#   for w in word_count:
-#     print(w, word_count[w])
-#     out.write("".join([w, '\t', str(word_count[w]), '\n']))
 
 
 

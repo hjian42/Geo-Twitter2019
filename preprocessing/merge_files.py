@@ -44,7 +44,7 @@ def count_stats():
 		tweet_count = 0
 		token_count = 0
 		term_set = set()
-		file_added = '../cmu-tweet.txt'
+		file_added = '../tweets2019/{}_tokenized.txt'.format(c)
 		with open(file_added) as f_added:
 			for line in f_added:
 				tokens = line.split()
@@ -52,7 +52,6 @@ def count_stats():
 				token_count += len(tokens)
 				[term_set.add(token) for token in tokens]
 				[main_term_set.add(token) for token in tokens]
-				main_tweet_count += 1
 		print("{} added new tweets".format(c))
 		print("{} tweets".format(tweet_count))
 		print("{} tokens".format(token_count))
@@ -64,7 +63,7 @@ def count_stats():
 	print("TOTAL\t {} tokens".format(main_token_count))
 	print("TOTAL\t {} terms".format(len(main_term_set)))
 
-# count_stats()
+count_stats()
 
 
 
