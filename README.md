@@ -31,7 +31,10 @@ This `224u-dataset` folder on [google drive](https://drive.google.com/drive/fold
 
 ### Model
 
-To use our model implementation, you should visit the github page [GEODIST-PyTorch](https://github.com/yuxingch/GEODIST-PyTorch).
+To use our model implementation, you should visit the github page [GEODIST-PyTorch](https://github.com/yuxingch/GEODIST-PyTorch). There are four models in the github repository:
+  - baseline models: frequency model and syntactic model
+  - GEODIST model: obtain region-specific embeddings
+  - AdaGram model: a wrapper of AdaGram model to use in our framework
 
 
 
