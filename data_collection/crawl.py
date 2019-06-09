@@ -65,10 +65,10 @@ if __name__ == '__main__':
     data_list = []
     NUM_OF_TWEETS = {'count': 0, 'seen': 0}
 
-    access_token = "1108546352688971778-YaO66OQzUKnHdfSXbn1DUpIqbbmDF1"
-    access_secret = "VZsYEFx7T5vqnb3lrK6iXkflAvxbycvf80GqokB3JPAuw"
-    consumer_key = "L3HNFO841Ubkqod20tBLNTnvw"
-    consumer_secret = "sOiwu2JYpJcu4wuirIMfczjBrNMenDzK5ooS9XEzBfzTlWB9ET"
+    access_token = ""
+    access_secret = ""
+    consumer_key = ""
+    consumer_secret = ""
 
     auth = OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_secret)
