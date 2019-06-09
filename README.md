@@ -29,6 +29,10 @@ This `224u-dataset` folder on [google drive](https://drive.google.com/drive/fold
 - `countryName_tokenized.txt`: lower case, filtered out @xxx, emojis, and other text normalizations
 - `countryName_tok_pos.txt`: word_pos format for the text section
 
+### Model
+
+To use our model implementation, you should visit the github page [GEODIST-PyTorch](https://github.com/yuxingch/GEODIST-PyTorch).
+
 
 
 
