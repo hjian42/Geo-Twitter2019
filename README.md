@@ -6,7 +6,7 @@ In this project, we use skip-gram models to capture the dialectal changes betwee
 
 ## Dataset Statistics
 
-### total statistics
+### Statistics
 
 | Number 	| USA 	| UK 	| Total 	|
 |--------	|------------	|------------	|------------	|
@@ -16,7 +16,7 @@ In this project, we use skip-gram models to capture the dialectal changes betwee
 
 note: CMU geo data contain 378K tweets
 
-### dataset
+### Dataset
 
 This `geo-tweets2019-dataset` folder on [google drive](https://drive.google.com/drive/folders/1FHk2x0nk_hCNf8fcGL0XNNep-mvo_BXX?usp=sharing).
 
@@ -36,6 +36,7 @@ To use our model implementation, you should visit the github page [GEODIST-PyTor
 1. [A Latent Variable Model for Geographic Lexical Variation](http://www.cs.cmu.edu/~nasmith/papers/eisenstein+oconnor+smith+xing.emnlp10.pdf): the first paper that detects dialect variations using LDA
 2. [Breaking Sticks and Ambiguities with Adaptive Skip-gram](https://arxiv.org/pdf/1502.07257.pdf): AdaGram Model that does word sense disambiguation, with its Julia Implementation: [github](https://github.com/sbos/AdaGram.jl).
 3. [Freshman or Fresher? Quantifying the Geographic Variation of Internet Language](https://arxiv.org/pdf/1510.06786.pdf)
+4. [Python Implementation of AdaGram](https://github.com/lopuhin/python-adagram)
 
 
 
