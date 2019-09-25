@@ -19,7 +19,7 @@ note: CMU geo data only contain 378K tweets
 To use our model implementation, you should visit the github page [GEODIST-PyTorch](https://github.com/yuxingch/GEODIST-PyTorch). There are four models in the github repository:
   - baseline models: frequency model and syntactic model
   - GEODIST model: region-specific embeddings
-  - DialectGram model: a wrapper of DialectGram model to use in our framework
+  - DialectGram model: a novel approach to compose dialect-sensitive word embeddings, based on Adaptive Skip-gram.
   
 ### Acknowledgement
 
