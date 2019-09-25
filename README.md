@@ -2,11 +2,9 @@
 
 ## Description
 
-In this project, we use skip-gram models to capture the dialectal changes between the United States and the United Kingdom on social media.
+In this project, we use a novel non-parametric skip-gram model to capture the dialectal changes of English on multiple resolutions. This repository contains the tweets ids we used for training the model. You are free to crawl the data using these ids and preprocess the data using our tools to replicate our research results. 
 
-## Dataset Statistics
-
-### Statistics
+## Dataset
 
 | Number 	| USA 	| UK 	| Total 	|
 |--------	|------------	|------------	|------------	|
@@ -14,29 +12,24 @@ In this project, we use skip-gram models to capture the dialectal changes betwee
 | token 	| 41,637,107 	| 22,012,953 	| 63,650,060 	|
 | term 	| 865,784 	| 469,570 	| 1,167,790 	|
 
-note: CMU geo data contain 378K tweets
-
-### Dataset
-
-This `geo-tweets2019-dataset` folder on [google drive](https://drive.google.com/drive/folders/1FHk2x0nk_hCNf8fcGL0XNNep-mvo_BXX?usp=sharing).
-
-- `countryName.txt`: raw text data, not preprocess the emojis, @xxx, etc
-- `countryName_tokenized.txt`: lower case, filtered out @xxx, emojis, and other text normalizations
-- `countryName_tok_pos.txt`: word_pos format for the text section
+note: CMU geo data only contain 378K tweets
 
 ### Model
 
 To use our model implementation, you should visit the github page [GEODIST-PyTorch](https://github.com/yuxingch/GEODIST-PyTorch). There are four models in the github repository:
   - baseline models: frequency model and syntactic model
-  - GEODIST model: obtain region-specific embeddings
-  - AdaGram model: a wrapper of AdaGram model to use in our framework
+  - GEODIST model: region-specific embeddings
+  - DialectGram model: a wrapper of DialectGram model to use in our framework
   
-### References
+### Acknowledgement
 
-1. [A Latent Variable Model for Geographic Lexical Variation](http://www.cs.cmu.edu/~nasmith/papers/eisenstein+oconnor+smith+xing.emnlp10.pdf): the first paper that detects dialect variations using LDA
+We would like to acknowledge the following resources when we implement our models:
+
+1. [A Latent Variable Model for Geographic Lexical Variation](http://www.cs.cmu.edu/~nasmith/papers/eisenstein+oconnor+smith+xing.emnlp10.pdf)
 2. [Breaking Sticks and Ambiguities with Adaptive Skip-gram](https://arxiv.org/pdf/1502.07257.pdf): AdaGram Model that does word sense disambiguation, with its Julia Implementation: [github](https://github.com/sbos/AdaGram.jl).
-3. [Freshman or Fresher? Quantifying the Geographic Variation of Internet Language](https://arxiv.org/pdf/1510.06786.pdf)
-4. [Python Implementation of AdaGram](https://github.com/lopuhin/python-adagram)
+3. [David Bamman, Chris Dyer and Noah Smith, "Distributed Representations of Geographically Situated Language," ACL 2014.](http://acl2014.org/acl2014/P14-2/pdf/P14-2134.pdf)
+4. [Freshman or Fresher? Quantifying the Geographic Variation of Internet Language](https://arxiv.org/pdf/1510.06786.pdf)
+5. [Python Implementation of AdaGram](https://github.com/lopuhin/python-adagram)
 
 
 
