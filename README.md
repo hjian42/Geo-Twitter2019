@@ -32,7 +32,19 @@ We would like to acknowledge the following resources when we implement our model
 5. [Python Implementation of AdaGram](https://github.com/lopuhin/python-adagram)
 
 
+## Citation
+Jiang, Hang*; Haoshen Hong*; Yuxing Chen*; and Vivek Kulkarni. 2019. DialectGram: Automatic Detection of Dialectal Changes with Multi-geographic Resolution Analysis. To appear in *Proceedings of the Society for Computation in Linguistics*. New Orleans: Linguistic Society of America. 
 
+```
+@inproceedings{Jiang:Hong:Chen:2020:SCiL,
+  Author = {Jiang, Hang  and  Hong, Haoshen  and  Chen, Yuxing  and  Kulkarni, Vivek},
+  Title = {DialectGram: Automatic Detection of Dialectal Changes with Multi-geographic Resolution Analysis},
+  Booktitle = {Proceedings of the Society for Computation in Linguistics},
+  Location = {New Orleans},
+  Publisher = {Linguistic Society of America},
+  Address = {Washington, D.C.},
+  Year = {2020}}
+```
 
 
 
