@@ -23,7 +23,7 @@ To use our model implementation, you should visit the github page [DialectGram](
 
 ### Demo
 
-You can play with our demo on the website: [demo]()
+You can play with our demo on the website: [demo](./demo/main.html)
 
   
 ### Acknowledgement
